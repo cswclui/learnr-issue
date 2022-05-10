@@ -1,8 +1,8 @@
 # learnr-issue
 
 ```
-docker build . -t cswclui/learnrissue
-docker push cswclui/learnrissue
+docker build . -t vlabpolyu/learnrissue
+docker push vlabpolyu/learnrissue
 
-docker run -p 13838:3838 cswclui/learnrissue
+docker run -p 13838:3838 vlabpolyu/learnrissue
 ```
