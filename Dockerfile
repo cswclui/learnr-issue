@@ -12,11 +12,11 @@ RUN install2.r --error \
     -r 'http://cran.rstudio.com' \
     remotes \
     NHANES \
-    && Rscript -e "remotes::install_github(c('rstudio/learnr', 'rstudio-education/gradethis'))" \
+    && Rscript -e "remotes::install_github(c('rstudio/learnr#692', 'rstudio-education/gradethis'))" \
     ## clean up
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
-ADD sample.Rmd /srv/shiny-server
+ADD . /srv/shiny-server
 
 RUN sudo chown -R shiny /srv/shiny-server
 
