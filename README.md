@@ -2,7 +2,7 @@
 
 ```
 docker build . -t vlabpolyu/learnsample
-docker push vlabpolyu/learnrsample
+docker push vlabpolyu/learnsample
 
 docker run -p 13838:3838 vlabpolyu/learnsample
 

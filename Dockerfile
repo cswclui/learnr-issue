@@ -12,9 +12,15 @@ RUN install2.r --error \
     -r 'http://cran.rstudio.com' \
     remotes \
     NHANES \
-    && Rscript -e "remotes::install_github(c('rstudio/learnr#692', 'rstudio-education/gradethis'))" \
+    && Rscript -e "remotes::install_github(c('rstudio/learnr', 'rstudio-education/gradethis','rundel/learnrhash'))" \
     ## clean up
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
+
+
+RUN Rscript -e "remotes::install_github(c('OpenIntroStat/openintro'))" \
+    && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
+
+
 
 ADD . /srv/shiny-server
 

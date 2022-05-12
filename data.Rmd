@@ -487,21 +487,3 @@ grade_this({
   fail("Please try again.")
 })
 ```
-
-## Submit progress
-
-```{r context="server"}
-learnrhash::encoder_logic(strip_output = T)
-```
-
-```{r encode, echo=FALSE}
-learnrhash::encoder_ui(
-  ui_before = div(strong("Submit your hash in the form below."), br(), br()),
-  ui_after  = learnrhash::iframe_ui(
-    src = "https://docs.google.com/forms/d/e/1FAIpQLSda78rAQWziQ-L6eDanGoDAhcfoi6JU_dg-c-6A9rrEXdvJwg/viewform", ## change link, include name
-    width="900px", height= "1000px"
-  )
-)
-```
-
-* * *
