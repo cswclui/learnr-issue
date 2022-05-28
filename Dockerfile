@@ -20,9 +20,10 @@ RUN install2.r --error \
 RUN Rscript -e "remotes::install_github(c('OpenIntroStat/openintro'))" \
     && rm -rf /tmp/downloaded_packages/ /tmp/*.rds
 
-
-
 ADD . /srv/shiny-server
 
 RUN sudo chown -R shiny /srv/shiny-server
 
+RUN useradd vlab && mkdir /home/vlab && chown -R vlab /home/vlab
+
+ADD shiny-server.conf /etc/shiny-server/ 
